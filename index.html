@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="js.js"></script>
+		<html lang="en">
+		    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+    <script type="text/javascript" src="/project2/sweetalert/sweetalert-master/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="/project2/sweetalert/sweetalert-master/dist/sweetalert.css">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/waves/dist/waves.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/waves/dist/waves.min.js"></script>
+</head>
+		<title>
+			Js Animation 
+		</title>
+	</head>
+	<body>
+
+
+
+
+<audio controls autoplay  loop>
+  <source src="Betamaxx.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div id="container">
+ <img class='a'  src="http://misis.ru/portals/0/Kaf_BISUP/a-_tNEJnC-I.jpg">
+    <img  class='b' src="http://misis.ru/portals/0/Kaf_BISUP/a-_tNEJnC-I.jpg">
+   <img  class='c' src="http://misis.ru/portals/0/Kaf_BISUP/a-_tNEJnC-I.jpg">
+     <img class='aa'  src="http://misis.ru/portals/0/Kaf_BISUP/a-_tNEJnC-I.jpg">
+     <img  class='bb' src="http://misis.ru/portals/0/Kaf_BISUP/a-_tNEJnC-I.jpg">
+   <img  class='cc' src="http://misis.ru/portals/0/Kaf_BISUP/a-_tNEJnC-I.jpg">
+    
+   
+</div>
+
+
+<style type="text/css">
+    div#container {height:600px;width:100%;}
+
+audio
+{
+    display: none;
+}
+
+img.a {
+width: 200px;
+height:250px;
+ background-color:red;
+position:fixed;
+    
+}
+img.b {
+width: 200px;
+height:250px;
+ background-color:blue;
+position:fixed;
+    
+}
+img.c {
+width: 200px;
+height:250px;
+ background-color:green;
+position:fixed;
+    
+}
+img.cc {
+width: 200px;
+height:250px;
+ background-color:green;
+position:fixed;
+    
+}
+img.aa {
+width: 200px;
+height:250px;
+ background-color:green;
+position:fixed;
+    
+}
+img.bb {
+width: 200px;
+height:250px;
+ background-color:green;
+position:fixed;
+    
+}
+</style>
+
+
+
+<script>
+$(document).ready(function() {
+    animateDiv($('.a'));
+        animateDiv($('.b'));
+        animateDiv($('.c'));
+        animateDiv($('.aa'));
+        animateDiv($('.bb'));
+        animateDiv($('.cc'));
+
+});
+
+function makeNewPosition($container) {
+
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $container.height() - 100;
+    var w = $container.width() - 100;
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh, nw];
+
+}
+
+function animateDiv($target) {
+    var newq = makeNewPosition($target.parent());
+    var oldq = $target.offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+    $target.animate({
+        top: newq[0],
+        left: newq[1]
+    }, speed, function() {
+        animateDiv($target);
+    });
+
+};
+
+function calcSpeed(prev, next) {
+/*
+   var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+
+    var greatest = x > y ? x : y;
+
+    var speedModifier = *Math.random();
+Math.ceil(greatest / speedModifier); 
+*/
+    var speed = Math.random()*1000; 
+
+    return speed;
+
+}
+</script>
+
+<script type = "text/javascript" > 
+
+var color = function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+var bgcolor = document.body.style.backgroundColor;
+
+setInterval(function() { 
+    document.body.style.backgroundColor = color(); //() to execute the function!
+}, 40);
+</script>
+
+
+</body>
+</html>
