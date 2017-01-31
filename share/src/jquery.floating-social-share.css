@@ -116,7 +116,7 @@
     margin-top: 5px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-width:961px) {
+
 
     #floatingSocialShare {
         margin-top: 50px;
@@ -145,4 +145,4 @@
         -o-transition-property: none;
         transition-property: none;
     }
-}
+
