@@ -2,33 +2,24 @@
 <html>
 <head lang="en">
     	<link rel="stylesheet" type="text/css" href="style.css" />
-		<script type="text/javascript" src="js.js"></script>	   
-		
-		
-   <link rel="stylesheet" type="text/css" href="/share/dist/jquery.floating-social-share.min.css" />
     <link rel="stylesheet" type="text/css" href="/share/src/jquery.floating-social-share.css" />
 
-
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  
   
     <meta charset="utf-8">
     <meta property="og:description" name="description" content="Crazy Jimmy By 1cvet.com">
-    <meta property="og:image" content="http://www.1cvet.com/wp-content/uploads/2016/09/1cvet_Jimmy_in_folder.jpg">
+    <meta property="og:site_name" content="Crazy Jimmy"/>
+    <meta property=”og:title” content=" Crazy Jimmy in your browser :)" />
+    <meta property=”og:type” content="website" />
+    <meta property=”og:description” content="Your entertaining and descriptive copy here, if your meta description is good, use it." />
+  
+   
     <title>Crazy Jimmy By 1cvet.com</title>
-    
-    
-   
-   
-    
     
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-     
-     
-     
+    
      <script type="text/javascript" src="/jrumble/demo/js/jquery.jrumble.1.3.js"></script>
 </head>
 <body>
@@ -46,11 +37,8 @@
     });
 </script>
 
-
-
-
 <audio controls autoplay  loop>
-  <source class="audio" src="Betamaxx.mp3" type="audio/mpeg">
+  <source class="audio" src="Chipzel_Focus.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -64,6 +52,104 @@
 	<script src="/jrumble/demo/js/jquery-1.7.2.min.js"></script>
 <script src="/jrumble/demo/js/jquery.jrumble.1.3.min.js"></script> 
 <script src="/jrumble/demo/js/prettify.js"></script>
+
+
+<div id="container">
+			    <div>
+   <center><img id="demo2" class='logo'  src="/jimmy.png"></center>  
+    
+</div>
+	
+ <img id="demo16" class='a'  src="/jimmy1.png">
+    <img   class='b' src="/jimmy1.png">
+   <img  class='c' src="/jimmy1.png">
+     <img  class='aa'  src="/jimmy2.png">
+     <img class='bb' src="/jimmy2.png">
+   <img  class='cc' src="/jimmy2.png">
+  
+</div>
+	
+
+
+<style>
+    img
+  {
+      width:100%;
+      max-width:700px;
+  }
+  
+  @media only screen and (max-device-width: 1024px) {
+       img
+  {
+      width:100%;
+    
+  }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function() {
+    animateDiv($('.a'));
+        animateDiv($('.b'));
+        animateDiv($('.c'));
+        animateDiv($('.aa'));
+        animateDiv($('.bb'));
+        animateDiv($('.cc'));
+
+});
+
+function makeNewPosition($page) {
+
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $page.height() ;
+    var w = $page.width() ;
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh, nw];
+
+}
+
+function animateDiv($target) {
+    var newq = makeNewPosition($target.parent());
+    var oldq = $target.offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+    $target.animate({
+        top: newq[0],
+        left: newq[1]
+    }, speed, function() {
+        animateDiv($target);
+    });
+
+};
+
+function calcSpeed(prev, next) {
+/*
+   var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+
+    var greatest = x > y ? x : y;
+
+    var speedModifier = *Math.random();
+Math.ceil(greatest / speedModifier); 
+*/
+    var speed = Math.random()*1000; 
+
+    return speed;
+
+}
+
+</script>
 
 <script>
 $(function(){
@@ -93,8 +179,9 @@ $(function(){
 		y: 0,
 		rotation: 5
 	});
+	$('#demo2').trigger('startRumble');
 	
-	$('#demo1, #demo2, #demo3, #demo4').hover(function(){
+	$('#demo1, #demo3, #demo4').hover(function(){
 		$(this).trigger('startRumble');
 	}, function(){
 		$(this).trigger('stopRumble');
@@ -183,7 +270,7 @@ $(function(){
 		}
 	});
 	
-	$('#demo16').trigger('startRumble');
+	$('#demo16',"demo161","demo162","demo163","demo164","demo165").trigger('startRumble');
 	
 	$('#demo17').hover(function(){
 		$('#demo18').trigger('startRumble');
@@ -231,117 +318,31 @@ $(function(){
 });
 </script>
 
-</div>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-		    
-		    <div>
-   <center><img id="demo2" class='logo'  src="/jimmy.png"></center>  
-    
-</div>
-
-<div id="container">
- <img  class='a'  src="/jimmy1.png">
-    <img   class='b' src="/jimmy1.png">
-   <img   class='c' src="/jimmy1.png">
-     <img  class='aa'  src="/jimmy2.png">
-     <img  class='bb' src="/jimmy2.png">
-   <img   class='cc' src="/jimmy2.png">
-  
-</div>
-		</div>
-	</div>
-</div>
-
-
-<style>
-    img
-  {
-      width:80%;
-  }
-  
-  @media only screen and (max-device-width: 1024px) {
-        img
-  {
-      width:100%;
-  }
-  }
-</style>
-
-<script>
-$(document).ready(function() {
-    animateDiv($('.a'));
-        animateDiv($('.b'));
-        animateDiv($('.c'));
-        animateDiv($('.aa'));
-        animateDiv($('.bb'));
-        animateDiv($('.cc'));
-
-});
-
-function makeNewPosition($page) {
-
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $page.height() ;
-    var w = $page.width() ;
-
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-
-    return [nh, nw];
-
-}
-
-function animateDiv($target) {
-    var newq = makeNewPosition($target.parent());
-    var oldq = $target.offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-    $target.animate({
-        top: newq[0],
-        left: newq[1]
-    }, speed, function() {
-        animateDiv($target);
-    });
-
-};
-
-function calcSpeed(prev, next) {
-/*
-   var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-
-    var greatest = x > y ? x : y;
-
-    var speedModifier = *Math.random();
-Math.ceil(greatest / speedModifier); 
-*/ 
-    var speed = Math.random()*1200; 
-
-    return speed;
-
-}
-</script>
 
 <script type = "text/javascript" > 
+var color2= function getRandColor(brightness){
 
-var color = function getRandomColor() {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+    // Six levels of brightness from 0 to 5, 0 being the darkest
+    var rgb = [Math.random() * 256, Math.random() * 256, Math.random() * 256];
+    var mix = [brightness*51, brightness*51, brightness*51]; //51 => 255/5
+    var mixedrgb = [rgb[0] + mix[0], rgb[1] + mix[1], rgb[2] + mix[2]].map(function(x){ return Math.round(x/2.0)})
+    return "rgb(" + mixedrgb.join(",") + ")";
 }
-
 var bgcolor = document.body.style.backgroundColor;
 
 setInterval(function() { 
-    document.body.style.backgroundColor = color(); //() to execute the function!
-}, 70); 
+    document.body.style.backgroundColor = color2(5); //() to execute the function!
+}, 200); 
+
+
 
 </script>
+
+
+
+
+
+
 
 </body>
 </html>
